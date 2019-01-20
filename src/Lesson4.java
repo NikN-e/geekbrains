@@ -3,8 +3,8 @@ import java.util.Random;
 
 public class Lesson4 {
     public static char[][] map;
-    public static final int SIZE = 3;
-    public static final int DOTS_TO_WIN = 3;
+    public static final int SIZE = 5;
+    public static final int DOTS_TO_WIN = 4;
     public static final char DOT_EMPTY = '.';
     public static final char DOT_X = 'X';
     public static final char DOT_0 = '0';
@@ -103,7 +103,7 @@ public class Lesson4 {
                 if(map[j][i] == symb){
                     count_symbY = count_symbY + 1;
                 }
-                if(count_symbY == SIZE) return true;
+                if(count_symbY == DOTS_TO_WIN) return true;
 
                 if(i == j && map[i][j] == symb){
                     count_d1 += 1;
@@ -114,8 +114,8 @@ public class Lesson4 {
             }
             if(count_symbX == SIZE) return true;
         }
-        if(count_d1 == SIZE) return true;
-        if(count_d2 == SIZE) return true;
+        if(count_d1 == DOTS_TO_WIN) return true;
+        if(count_d2 == DOTS_TO_WIN) return true;
 
         return false;
     }
