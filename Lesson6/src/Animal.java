@@ -33,6 +33,7 @@ class Cat extends Animal{
             System.out.println("maxHeight Cat " + false);
 
     }
+    
 }
 
 class Dog extends Animal{
